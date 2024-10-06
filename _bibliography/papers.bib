@@ -1,115 +1,144 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+@inproceedings{10.1145/3578360.3580272,
+author = {Patabandi, Tharindu R. and Hall, Mary},
+title = {Efficiently Learning Locality Optimizations by Decomposing Transformation Domains},
+year = {2023},
+isbn = {9798400700880},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3578360.3580272},
+doi = {10.1145/3578360.3580272},
+abstract = {Optimizing compilers for efficient machine learning are more important than ever due to the rising ubiquity of the application domain in numerous facets of life. Predictive model-guided compiler optimization is sometimes used to derive sequences of loop transformations that optimize the performance of the machine learning computations. However, training-data generation for these models often requires the traversal of prohibitively expensive schedule spaces and executing code variants corresponding to different schedule options. The size of these search spaces can quickly explode when predicting the combined effects of multiple loop transformations. This paper characterizes a learning strategy for deriving transformation sequences called Composed Singular Prediction (CSP). Instead of a monolithic cost model that predicts the profitability of a given transformation sequence, CSP exploits a collection of cost models, each trained on a particular loop transformation domain. In a case study, a domain-specific compiler deploys the learned models to predict loop tiling and loop permutation schedules to perform data locality optimization of Conv2d kernels. The system achieves performance improvements up to 4.0x against Intel oneDNN while saving ~ 105.3x in training data collection time compared to exhaustive exploration of the design space.},
+booktitle = {Proceedings of the 32nd ACM SIGPLAN International Conference on Compiler Construction},
+pages = {37–49},
+numpages = {13},
+keywords = {Compilers, Convolution, Optimization},
+location = {Montr\'{e}al, QC, Canada},
+series = {CC 2023}
 }
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+@article{doi:10.1177/1094342019866247,
+author = {Anand Venkat and Tharindu Rusira and Raj Barik and Mary Hall and Leonard Truong},
+title ={SWIRL: High-performance many-core CPU code generation for deep neural networks},
+
+journal = {The International Journal of High Performance Computing Applications},
+volume = {33},
+number = {6},
+pages = {1275-1289},
+year = {2019},
+doi = {10.1177/1094342019866247},
+
+URL = {
+        https://doi.org/10.1177/1094342019866247
+},
+eprint = { 
+    
+        https://doi.org/10.1177/1094342019866247
+}
+,
+    abstract = { Deep neural networks (DNNs) have demonstrated effectiveness in many domains including object recognition, speech recognition, natural language processing, and health care. Typically, the computations involved in DNN training and inferencing are time consuming and require efficient implementations. Existing frameworks such as TensorFlow, Theano, Torch, Cognitive Tool Kit (CNTK), and Caffe enable Graphics Processing Unit (GPUs) as the status quo devices for DNN execution, leaving Central Processing Unit (CPUs) behind. Moreover, existing frameworks forgo or limit cross layer optimization opportunities that have the potential to improve performance by significantly reducing data movement through the memory hierarchy. In this article, we describe an alternative approach called SWIRL, a compiler that provides high-performance CPU implementations for DNNs. SWIRL is built on top of the existing domain-specific language (DSL) for DNNs called LATTE. SWIRL separates DNN specification and its schedule using predefined transformation recipes for tensors and layers commonly found in DNN layers. These recipes synergize with DSL constructs to generate high-quality fused, vectorized, and parallelized code for CPUs. On an Intel Xeon Platinum 8180M CPU, SWIRL achieves performance comparable with Tensorflow integrated with MKL-DNN; on average 1.00× of Tensorflow inference and 0.99× of Tensorflow training. It also outperforms the original LATTE compiler on average by 1.22× and 1.30× on inference and training, respectively. }
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+@inproceedings{10.1145/3460945.3464955,
+author = {Patabandi, Tharindu R. and Venkat, Anand and Kulkarni, Abhishek and Ratnalikar, Pushkar and Hall, Mary and Gottschlich, Justin},
+title = {Predictive data locality optimization for higher-order tensor computations},
+year = {2021},
+isbn = {9781450384674},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3460945.3464955},
+doi = {10.1145/3460945.3464955},
+abstract = {Automating locality optimization is still an open problem for compiler writers. Compiler-based approaches, guided by analytical cost models have achieved some success in matching high performance libraries on a restricted set of computations such as general matrix multiply (GEMM). On the other hand, library-based approaches may present some open scalability concerns. Recent developments in convolutional neural networks has seen an explosion of models, each with differing combinations of parameters. Manually tuning each of these configurations can take many development months. Further, these operations are called multiple times during machine learning training, which necessitates highly optimized implementations. 2D convolutional operators are unique in that they consist of 7-deep loop nests with different loops carrying reuse for different tensors, making the problem of identifying an optimal loop ordering hard. We devise a machine learning-based compiler which learns a regression model, correlating performance with the loop order. We integrate this model with other traditional compiler analysis for transformations such as loop unrolling and vectorization, relying on the MultiLevel Intermediate Representation (MLIR) compiler framework. We achieve an average speedup of 1.67x and 1.41x against oneDNN for 2D convolution forward and weight update kernels respectively. We are also at 0.88x and 0.96x the performance of oneDNN’s best performing implementation which applies additional data layout transformations.},
+booktitle = {Proceedings of the 5th ACM SIGPLAN International Symposium on Machine Programming},
+pages = {43–52},
+numpages = {10},
+keywords = {Compilers, Convolutional neural networks, Loop transformations, Machine learning},
+location = {Virtual, Canada},
+series = {MAPS 2021}
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
-  inspirehep_id = {3255}
+@INPROCEEDINGS{8855553,
+  author={Rameshka, Piyumi and Senanayake, Pasindu and Kannangara, Thulana and Seneviratne, Praveen and Jayasena, Sanath and Rusira, Tharindu and Hall, Mary},
+  booktitle={2019 IEEE 21st International Conference on High Performance Computing and Communications; IEEE 17th International Conference on Smart City; IEEE 5th International Conference on Data Science and Systems (HPCC/SmartCity/DSS)}, 
+  title={Rigel: A Framework for OpenMP PerformanceTuning}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={2093-2102},
+  keywords={Feature extraction;Graphics processing units;Optimization;Hardware;Machine learning;Tuning;Computer architecture;OpenMP;Clang;Performance Tunining;parallel programming;machine learning;GPU},
+  doi={10.1109/HPCC/SmartCity/DSS.2019.00290}}
+
+@InProceedings{10.1007/978-3-030-72789-5_9,
+author="Patabandi, Tharindu R.
+and Venkat, Anand
+and Barik, Rajkishore
+and Hall, Mary",
+editor="Pande, Santosh
+and Sarkar, Vivek",
+title="SWIRL ++ : Evaluating Performance Models to Guide Code Transformation in Convolutional Neural Networks",
+booktitle="Languages and Compilers for Parallel Computing",
+year="2021",
+publisher="Springer International Publishing",
+address="Cham",
+pages="108--126",
+abstract="Convolutional Neural Networks (CNNs) are ubiquitous in applications ranging from self-driving cars to various branches of health care. CPUs with large core counts and wide SIMD support are used in HPC clusters and supercomputers; therefore, high-performance CPU implementations of CNNs are valuable, in addition to the more prevalent GPU implementations. In this paper, we describe SWIRL ++, an optimization approach for CNNs that incorporates an analytical performance model to identify optimization strategies that minimize data movement overheads of CNN execution. We integrate the model with the SWIRL DSL compiler to automatically generate high-performance implementations of CNNs, optimized for cache hierarchies, and both thread-level and SIMD parallelism.",
+isbn="978-3-030-72789-5"
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
+@INPROCEEDINGS{7284456,
+  author={Jayasena, Sanath and Fernando, Milinda and Rusira, Tharindu and Perera, Chalitha and Philips, Chamara},
+  booktitle={2015 IEEE International Parallel and Distributed Processing Symposium Workshop}, 
+  title={Auto-Tuning the Java Virtual Machine}, 
+  year={2015},
+  volume={},
+  number={},
+  pages={1261-1270},
+  keywords={Benchmark testing;Java;Computer architecture;Tuners;Optimization;Virtual machining;Java Virtual Machine;Hot Spot;Auto-tuning;Optimization;SPECjvm2008;DaCapo;Benchmarks;flag hierarchy},
+  doi={10.1109/IPDPSW.2015.84}}
+
+@InProceedings{10.1007/978-3-030-95953-1_9,
+author="Lake, Janaan
+and Patabandi, Tharindu R.
+and Hall, Mary",
+editor="Chapman, Barbara
+and Moreira, Jos{\'e}",
+title="Optimized Code Generation for Deep Neural Networks",
+booktitle="Languages and Compilers for Parallel Computing",
+year="2022",
+publisher="Springer International Publishing",
+address="Cham",
+pages="119--133",
+abstract="As Deep Neural Networks (DNNs) become more widely used in a variety of applications, the need for performance and portability on many different architectures, including CPUs, becomes increasingly important. Compiler-based methods offer opportunities for performance gains over statically-tuned libraries by exploiting data reuse and parallelism, efficient memory access, and vectorization for specific backends with the use of abstraction. The Batch Normalization (BN) operator can accelerate the training and increase the robustness of DNNs, making it a widely-used operator in many DNNs. LATTE is a domain-specific language for DNNs, and SWIRL is a compiler that can be used with LATTE. We extend the applicability of LATTE/SWIRL by incorporating the BN operator into the LATTE framework and by expanding the optimizations of SWIRL to this operator. The optimized BN operator in LATTE/SWIRL is compared to existing frameworks such as TensorFlow, TensorFlow with Intel MKL-DNN, TensorFlow with XLA, PyTorch with MKL-DNN and MXNet with MKL-DNN. The results show that a compiler-based approach for the BN operator can increase performance on CPU architectures.",
+isbn="978-3-030-95953-1"
 }
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
+@INPROCEEDINGS{7965196,
+  author={Rusira, Tharindu and Hall, Mary and Basu, Protonu},
+  booktitle={2017 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW)}, 
+  title={Automating Compiler-Directed Autotuning for Phased Performance Behavior}, 
+  year={2017},
+  volume={},
+  number={},
+  pages={1362-1371},
+  keywords={Optimization;Computer architecture;Program processors;Data transfer;Generators;Jacobian matrices;Context;autotuning;compiler;geometric multigrid;stencil;high performance;code generation},
+  doi={10.1109/IPDPSW.2017.152}}
 
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
+  @INPROCEEDINGS{7980464,
+  author={Wijesinghe, T. and Senevirathne, K. and Siriwardhana, C. and Visitha, W. and Jayasena, S. and Rusira, T. and Hall, M.},
+  booktitle={2017 Moratuwa Engineering Research Conference (MERCon)}, 
+  title={Parameterized Diamond Tiling for Parallelizing stencil computations}, 
+  year={2017},
+  volume={},
+  number={},
+  pages={99-104},
+  keywords={Diamond;Kernel;Mathematical model;Cost function;Parallel processing;Data structures},
+  doi={10.1109/MERCon.2017.7980464}}
 
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
+@phdthesis{patabandi2022guiding,
+  title={Guiding Loop Transformations for High-Performance Tensor Applications},
+  author={Patabandi, Tharindu},
+  year={2022},
+  school={The University of Utah}
 }
