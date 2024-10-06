@@ -16,29 +16,31 @@ pages = {37–49},
 numpages = {13},
 keywords = {Compilers, Convolution, Optimization},
 location = {Montr\'{e}al, QC, Canada},
-series = {CC 2023}
+series = {CC 2023},
+selected={true},
+google_scholar_id={KbBQZpvPDL4C},
+altmetric={10.1145/3578360.3580272},
+bibtex_show={true},
+dimensions={true}
 }
 
 @article{doi:10.1177/1094342019866247,
 author = {Anand Venkat and Tharindu Rusira and Raj Barik and Mary Hall and Leonard Truong},
 title ={SWIRL: High-performance many-core CPU code generation for deep neural networks},
-
 journal = {The International Journal of High Performance Computing Applications},
 volume = {33},
 number = {6},
 pages = {1275-1289},
 year = {2019},
 doi = {10.1177/1094342019866247},
-
-URL = {
-        https://doi.org/10.1177/1094342019866247
-},
-eprint = { 
-    
-        https://doi.org/10.1177/1094342019866247
-}
-,
-    abstract = { Deep neural networks (DNNs) have demonstrated effectiveness in many domains including object recognition, speech recognition, natural language processing, and health care. Typically, the computations involved in DNN training and inferencing are time consuming and require efficient implementations. Existing frameworks such as TensorFlow, Theano, Torch, Cognitive Tool Kit (CNTK), and Caffe enable Graphics Processing Unit (GPUs) as the status quo devices for DNN execution, leaving Central Processing Unit (CPUs) behind. Moreover, existing frameworks forgo or limit cross layer optimization opportunities that have the potential to improve performance by significantly reducing data movement through the memory hierarchy. In this article, we describe an alternative approach called SWIRL, a compiler that provides high-performance CPU implementations for DNNs. SWIRL is built on top of the existing domain-specific language (DSL) for DNNs called LATTE. SWIRL separates DNN specification and its schedule using predefined transformation recipes for tensors and layers commonly found in DNN layers. These recipes synergize with DSL constructs to generate high-quality fused, vectorized, and parallelized code for CPUs. On an Intel Xeon Platinum 8180M CPU, SWIRL achieves performance comparable with Tensorflow integrated with MKL-DNN; on average 1.00× of Tensorflow inference and 0.99× of Tensorflow training. It also outperforms the original LATTE compiler on average by 1.22× and 1.30× on inference and training, respectively. }
+URL = {https://doi.org/10.1177/1094342019866247 },
+eprint = {https://doi.org/10.1177/1094342019866247},
+abstract = { Deep neural networks (DNNs) have demonstrated effectiveness in many domains including object recognition, speech recognition, natural language processing, and health care. Typically, the computations involved in DNN training and inferencing are time consuming and require efficient implementations. Existing frameworks such as TensorFlow, Theano, Torch, Cognitive Tool Kit (CNTK), and Caffe enable Graphics Processing Unit (GPUs) as the status quo devices for DNN execution, leaving Central Processing Unit (CPUs) behind. Moreover, existing frameworks forgo or limit cross layer optimization opportunities that have the potential to improve performance by significantly reducing data movement through the memory hierarchy. In this article, we describe an alternative approach called SWIRL, a compiler that provides high-performance CPU implementations for DNNs. SWIRL is built on top of the existing domain-specific language (DSL) for DNNs called LATTE. SWIRL separates DNN specification and its schedule using predefined transformation recipes for tensors and layers commonly found in DNN layers. These recipes synergize with DSL constructs to generate high-quality fused, vectorized, and parallelized code for CPUs. On an Intel Xeon Platinum 8180M CPU, SWIRL achieves performance comparable with Tensorflow integrated with MKL-DNN; on average 1.00× of Tensorflow inference and 0.99× of Tensorflow training. It also outperforms the original LATTE compiler on average by 1.22× and 1.30× on inference and training, respectively. },
+selected={true},
+google_scholar_id={WbkHhVStYXYC},
+bibtex_show={true},
+altmetric={10.1177/1094342019866247},
+dimensions={true}
 }
 
 @inproceedings{10.1145/3460945.3464955,
@@ -56,7 +58,12 @@ pages = {43–52},
 numpages = {10},
 keywords = {Compilers, Convolutional neural networks, Loop transformations, Machine learning},
 location = {Virtual, Canada},
-series = {MAPS 2021}
+series = {MAPS 2021},
+selected={true},
+google_scholar_id={a9-T7VOCCH8C},
+bibtex_show={true},
+altmetric={10.1145/3460945.3464955},
+dimensions={true}
 }
 
 @INPROCEEDINGS{8855553,
@@ -68,7 +75,9 @@ series = {MAPS 2021}
   number={},
   pages={2093-2102},
   keywords={Feature extraction;Graphics processing units;Optimization;Hardware;Machine learning;Tuning;Computer architecture;OpenMP;Clang;Performance Tunining;parallel programming;machine learning;GPU},
-  doi={10.1109/HPCC/SmartCity/DSS.2019.00290}}
+  doi={10.1109/HPCC/SmartCity/DSS.2019.00290},
+  bibtex_show={true}
+  }
 
 @InProceedings{10.1007/978-3-030-72789-5_9,
 author="Patabandi, Tharindu R.
@@ -84,7 +93,9 @@ publisher="Springer International Publishing",
 address="Cham",
 pages="108--126",
 abstract="Convolutional Neural Networks (CNNs) are ubiquitous in applications ranging from self-driving cars to various branches of health care. CPUs with large core counts and wide SIMD support are used in HPC clusters and supercomputers; therefore, high-performance CPU implementations of CNNs are valuable, in addition to the more prevalent GPU implementations. In this paper, we describe SWIRL ++, an optimization approach for CNNs that incorporates an analytical performance model to identify optimization strategies that minimize data movement overheads of CNN execution. We integrate the model with the SWIRL DSL compiler to automatically generate high-performance implementations of CNNs, optimized for cache hierarchies, and both thread-level and SIMD parallelism.",
-isbn="978-3-030-72789-5"
+isbn="978-3-030-72789-5",
+bibtex_show={true},
+dimensions={true}
 }
 
 @INPROCEEDINGS{7284456,
@@ -96,7 +107,9 @@ isbn="978-3-030-72789-5"
   number={},
   pages={1261-1270},
   keywords={Benchmark testing;Java;Computer architecture;Tuners;Optimization;Virtual machining;Java Virtual Machine;Hot Spot;Auto-tuning;Optimization;SPECjvm2008;DaCapo;Benchmarks;flag hierarchy},
-  doi={10.1109/IPDPSW.2015.84}}
+  doi={10.1109/IPDPSW.2015.84},
+  bibtex_show={true}
+  }
 
 @InProceedings{10.1007/978-3-030-95953-1_9,
 author="Lake, Janaan
@@ -111,7 +124,8 @@ publisher="Springer International Publishing",
 address="Cham",
 pages="119--133",
 abstract="As Deep Neural Networks (DNNs) become more widely used in a variety of applications, the need for performance and portability on many different architectures, including CPUs, becomes increasingly important. Compiler-based methods offer opportunities for performance gains over statically-tuned libraries by exploiting data reuse and parallelism, efficient memory access, and vectorization for specific backends with the use of abstraction. The Batch Normalization (BN) operator can accelerate the training and increase the robustness of DNNs, making it a widely-used operator in many DNNs. LATTE is a domain-specific language for DNNs, and SWIRL is a compiler that can be used with LATTE. We extend the applicability of LATTE/SWIRL by incorporating the BN operator into the LATTE framework and by expanding the optimizations of SWIRL to this operator. The optimized BN operator in LATTE/SWIRL is compared to existing frameworks such as TensorFlow, TensorFlow with Intel MKL-DNN, TensorFlow with XLA, PyTorch with MKL-DNN and MXNet with MKL-DNN. The results show that a compiler-based approach for the BN operator can increase performance on CPU architectures.",
-isbn="978-3-030-95953-1"
+isbn="978-3-030-95953-1",
+bibtex_show={true}
 }
 
 @INPROCEEDINGS{7965196,
@@ -123,7 +137,9 @@ isbn="978-3-030-95953-1"
   number={},
   pages={1362-1371},
   keywords={Optimization;Computer architecture;Program processors;Data transfer;Generators;Jacobian matrices;Context;autotuning;compiler;geometric multigrid;stencil;high performance;code generation},
-  doi={10.1109/IPDPSW.2017.152}}
+  doi={10.1109/IPDPSW.2017.152},
+  bibtex_show={true}
+  }
 
   @INPROCEEDINGS{7980464,
   author={Wijesinghe, T. and Senevirathne, K. and Siriwardhana, C. and Visitha, W. and Jayasena, S. and Rusira, T. and Hall, M.},
@@ -134,11 +150,14 @@ isbn="978-3-030-95953-1"
   number={},
   pages={99-104},
   keywords={Diamond;Kernel;Mathematical model;Cost function;Parallel processing;Data structures},
-  doi={10.1109/MERCon.2017.7980464}}
+  doi={10.1109/MERCon.2017.7980464},
+  bibtex_show={true}
+  }
 
 @phdthesis{patabandi2022guiding,
   title={Guiding Loop Transformations for High-Performance Tensor Applications},
   author={Patabandi, Tharindu},
   year={2022},
-  school={The University of Utah}
+  school={The University of Utah},
+  bibtex_show={true}
 }
