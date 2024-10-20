@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: AI **•** Compilers **•** High-Performance Tensor Computations **•** Memory-centric Architectures
+subtitle: AI • Compilers • High-Performance Tensor Computations • Memory-centric Architectures
 
 profile:
   align: right
