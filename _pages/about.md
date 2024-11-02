@@ -5,8 +5,8 @@ permalink: /
 subtitle: AI • Compilers • High-Performance Tensor Computations • Memory-centric Architectures
 
 profile:
-  align: right
-  image: tharindu_prof_pic.jpeg
+  align: left
+  image: # tharindu_prof_pic.jpeg
   image_circular: true # crops the image to make it circular
   more_info: > # <p>San Jose, CA</p>
 
